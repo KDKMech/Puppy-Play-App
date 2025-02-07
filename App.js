@@ -11,11 +11,12 @@ export default function App() {
             uri: 'https://www.shutterstock.com/shutterstock/photos/2322075567/display_1500/stock-photo-devops-software-development-operations-infinity-symbol-web-development-concept-in-isometric-design-2322075567.jpg',
 
           }}
-          style={styles.image}
-        >
+          style={styles.image}>
+
+          <Text style={styles.name}>Name of user</Text>
+          <Text style={styles.bio}>Bio of user</Text>
         </ImageBackground>
       </View>
-      <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -31,6 +32,8 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: '100%',
+    justifyContent: 'flex-end',
+    padding: 20,
   },
   card: {
     width: '95%',
@@ -44,5 +47,16 @@ const styles = StyleSheet.create({
     boxShadowOpacity: 1,
     boxShadowRadius: 10,
     elevation: 11,
-  }
+  },
+  name: {
+    fontSize: 30,
+    color: 'white',
+    fontWeight: 'bold',
+  },
+  bio: {
+    fontSize: 18,
+    color: 'white',
+    lineHeight: 25,
+
+  },
 });
